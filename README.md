@@ -95,7 +95,7 @@ the RAK2247&RAK833 mini-PCIe module also support spi connection, here list the p
 
 Compile dependency with ubuntu 16.04
 
-	sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip
+	sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip texinfo
 
 ### Step 1: Clone SDK
 Open terminal, and type the following:<br>
