@@ -93,7 +93,7 @@ the RAK2247&RAK833 mini-PCIe module also support spi connection, here list the p
 
 ## Compile SDK
 
-Compile dependency with ubuntu 16.04
+Compile dependency with ubuntu 18.04
 
 	sudo apt-get install build-essential subversion git-core libncurses5-dev zlib1g-dev gawk flex quilt libssl-dev xsltproc libxml-parser-perl mercurial bzr ecj cvs unzip texinfo
 
@@ -110,7 +110,13 @@ Before you run make, you need to set compile environment first with envsetup.sh.
     cd RAK833-LoRaGateway-OpenWRT-MT7628-SPI
     ./build/envsetup.sh
 
-### Step 3: Run Make to compile
+### Step 3: Patch and continue
+
+    * Change "git clone 2>&1 | grep -- --recursive" to "git verison" in wiswrt/15.05-rak-rc2/include/prereq-build.mk  
+    * Copy patch/0002-port-to-perl-5.22-and-later.patch to wiswrt/15.05-rak-rc2/tools/automake/patches  
+    * Copy patch/210-openssl-1.1.x-compat.patch to wiswrt/15.05-rak-rc2/tools/mkimage/patches  
+
+### Step 4: Run Make to compile
 
 	make
 
