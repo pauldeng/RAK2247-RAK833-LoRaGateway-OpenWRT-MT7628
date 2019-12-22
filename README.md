@@ -1,3 +1,9 @@
+# Paul Changelog
+
+    * Changed "git clone 2>&1 | grep -- --recursive" to "git verison" in wiswrt/rak/purewrt-rc2/include/prereq-build.mk  
+    * Added 0002-port-to-perl-5.22-and-later.patch to wiswrt/rak/purewrt-rc2/tools/automake/patches  
+    * Added 210-openssl-1.1.x-compat.patch to wiswrt/rak/purewrt-rc2/tools/mkimage/patches  
+
 # Welcome to the WisLora wiki!
 The WisLora is WisAp(Mt7628 + OpenWRT) and Lora gateway, here to use RAK833. It is based on the latest SX1301 driver lora_gateway v5.0.1 and semtech packet_forwarder v4.0.1. We've tested it with TTN.
 
@@ -110,13 +116,7 @@ Before you run make, you need to set compile environment first with envsetup.sh.
     cd RAK833-LoRaGateway-OpenWRT-MT7628-SPI
     ./build/envsetup.sh
 
-### Step 3: Patch and continue
-
-    * Change "git clone 2>&1 | grep -- --recursive" to "git verison" in wiswrt/15.05-rak-rc2/include/prereq-build.mk  
-    * Copy patch/0002-port-to-perl-5.22-and-later.patch to wiswrt/15.05-rak-rc2/tools/automake/patches  
-    * Copy patch/210-openssl-1.1.x-compat.patch to wiswrt/15.05-rak-rc2/tools/mkimage/patches  
-
-### Step 4: Run Make to compile
+### Step 3: Run Make to compile
 
 	make
 
